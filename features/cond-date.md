@@ -73,6 +73,8 @@ The date tests are of the form:
 
 We start with a one-condition test.
 
+**Example 1**
+
 | Test   | Date Range | Format String | Example    |
 |:-------|:-----------|:--------------|:-----------|
 | `%[1m` | This month | `%[%b %d]`    | Dec 10     |
@@ -90,6 +92,8 @@ Reparsed a little, for clarity, you can see the test condition and the two forma
 ### Example 2
 
 This example contains three test conditions and four date formats.
+
+**Example 2**
 
 | Test  | Date Range | Format String | Example |
 |:------|:-----------|:--------------|:--------|

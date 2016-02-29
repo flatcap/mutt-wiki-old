@@ -21,12 +21,8 @@ Unlike normal color commands, `color status` can now take up to 2 extra paramete
 Commands
 --------
 
-color
-status
-foreground
-background
-regex
-num
+    color status foreground background [ regex [ num ]]
+
 With zero parameters, Mutt will set the default color for the entire status bar.
 
 With one parameter, Mutt will only color the parts matching the regex.

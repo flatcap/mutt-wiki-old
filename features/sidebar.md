@@ -55,8 +55,7 @@ Functions
 Commands
 --------
 
-sidebar\_whitelist
-mailbox
+    sidebar\_whitelist mailbox [ mailbox... ]
 
 Colors
 ------

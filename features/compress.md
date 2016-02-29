@@ -123,15 +123,9 @@ None
 Commands
 --------
 
-open-hook
-pattern
-shell-command
-close-hook
-pattern
-shell-command
-append-hook
-pattern
-shell-command
+    open-hook   pattern shell-command
+    close-hook  pattern shell-command
+    append-hook pattern shell-command
 
 Colors
 ------

@@ -27,9 +27,7 @@ where "item" can be the name of a $variable, \<function\> or command.
 Commands
 --------
 
-ifdef
-item
-config-command
+    ifdef item "config-command [args]"
 
 Muttrc
 ------
