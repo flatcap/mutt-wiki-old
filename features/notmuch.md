@@ -6,8 +6,7 @@ Email search engine
 Patch
 -----
 
-To check if Mutt supports “Notmuch”, look for “+USE\_NOTMUCH” in the
-mutt version.
+To check if Mutt supports "Notmuch", look for "+USE\_NOTMUCH" in the mutt version.
 
 **Dependencies**
 -   mutt-1.5.24
@@ -27,14 +26,14 @@ Functions
 
 **Notmuch Functions**
 
-Menus         | Default Key   | Function                      | Description
-------------- | ------------- | ----------------------------- | ------------------------------------------------
-index,pager   | X             | `<change-vfolder>`            | open a different virtual folder
-index,pager   | +             | `<entire-thread>`             | read entire thread of the current message
-index,pager   | \`            | `<modify-labels>`             | modify (notmuch) tags
-index,pager   | (none)        | `<modify-labels-then-hide>`   | modify labeld and then hide message
-index,pager   | (none)        | `<sidebar-toggle>`            | toggle between mailboxes and virtual mailboxes
-index,pager   | Alt-X         | `<vfolder-from-query>`        | generate virtual folder from query
+| Menus       | Default Key | Function                    | Description                                    |
+|:------------|:------------|:----------------------------|:-----------------------------------------------|
+| index,pager | X           | `<change-vfolder>`          | open a different virtual folder                |
+| index,pager | +           | `<entire-thread>`           | read entire thread of the current message      |
+| index,pager | \`          | `<modify-labels>`           | modify (notmuch) tags                          |
+| index,pager | (none)      | `<modify-labels-then-hide>` | modify labeld and then hide message            |
+| index,pager | (none)      | `<sidebar-toggle>`          | toggle between mailboxes and virtual mailboxes |
+| index,pager | Alt-X       | `<vfolder-from-query>`      | generate virtual folder from query             |
 
 Commands
 --------
@@ -46,10 +45,10 @@ Adds these to index-color patch:
 
 **Index Colors**
 
-Object         | Pattern   | Highlights
--------------- | --------- | ----------------------------------------------
-`index_tag`    | yes       | an individual message tag, %G, uses tag name
-`index_tags`   | no        | the transformed message tags, %g
+| Object       | Pattern | Highlights                                   |
+|:-------------|:--------|:---------------------------------------------|
+| `index_tag`  | yes     | an individual message tag, %G, uses tag name |
+| `index_tags` | no      | the transformed message tags, %g             |
 
 Sort
 ----
@@ -92,3 +91,4 @@ Credits
 -   Vladimir Marek \<Vladimir.Marek@oracle.com\>
 -   Víctor Manuel Jáquez Leal \<vjaquez@igalia.com\>
 -   Richard Russon \<rich@flatcap.org\>
+

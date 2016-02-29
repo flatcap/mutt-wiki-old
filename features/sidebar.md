@@ -6,8 +6,7 @@ Overview of mailboxes
 Patch
 -----
 
-To check if Mutt supports “Sidebar”, look for “+USE\_SIDEBAR” in the
-mutt version.
+To check if Mutt supports "Sidebar", look for "+USE\_SIDEBAR" in the mutt version.
 
 **Dependencies**
 -   mutt-1.5.24
@@ -20,38 +19,38 @@ Variables
 
 **Sidebar Variables**
 
-Name                      | Type      | Default
-------------------------- | --------- | ------------------------------
-`sidebar_delim_chars`     | string    | `/.`
-`sidebar_divider_char`    | string    | `|`
-`sidebar_folder_indent`   | boolean   | `no`
-`sidebar_format`          | string    | `%B%?F? [%F]?%* %?N?%N/?%4S`
-`sidebar_indent_string`   | string    | `  ` (two spaces)
-`sidebar_new_mail_only`   | boolean   | `no`
-`sidebar_next_new_wrap`   | boolean   | `no`
-`sidebar_refresh_time`    | number    | `60`
-`sidebar_scrollbar`       | boolean   | `no`
-`sidebar_short_path`      | boolean   | `no`
-`sidebar_sort_method`     | enum      | `SORT_ORDER`
-`sidebar_visible`         | boolean   | `no`
-`sidebar_whitelist`       | list      | (empty)
-`sidebar_width`           | number    | `20`
+| Name                    | Type    | Default                      |
+|:------------------------|:--------|:-----------------------------|
+| `sidebar_delim_chars`   | string  | `/.`                         |
+| `sidebar_divider_char`  | string  | `|`                          |
+| `sidebar_folder_indent` | boolean | `no`                         |
+| `sidebar_format`        | string  | `%B%?F? [%F]?%* %?N?%N/?%4S` |
+| `sidebar_indent_string` | string  | `  ` (two spaces)            |
+| `sidebar_new_mail_only` | boolean | `no`                         |
+| `sidebar_next_new_wrap` | boolean | `no`                         |
+| `sidebar_refresh_time`  | number  | `60`                         |
+| `sidebar_scrollbar`     | boolean | `no`                         |
+| `sidebar_short_path`    | boolean | `no`                         |
+| `sidebar_sort_method`   | enum    | `SORT_ORDER`                 |
+| `sidebar_visible`       | boolean | `no`                         |
+| `sidebar_whitelist`     | list    | (empty)                      |
+| `sidebar_width`         | number  | `20`                         |
 
 Functions
 ---------
 
 **Sidebar Functions**
 
-Menus         | Default Key   | Function                     | Description
-------------- | ------------- | ---------------------------- | ------------------------------------------------------
-index,pager   | (none)        | `<sidebar-next>`             | Move the highlight to next mailbox
-index,pager   | (none)        | `<sidebar-next-new>`         | Move the highlight to next mailbox with new mail
-index,pager   | (none)        | `<sidebar-open>`             | Open highlighted mailbox
-index,pager   | (none)        | `<sidebar-page-down>`        | Scroll the Sidebar down 1 page
-index,pager   | (none)        | `<sidebar-page-up>`          | Scroll the Sidebar up 1 page
-index,pager   | (none)        | `<sidebar-prev>`             | Move the highlight to previous mailbox
-index,pager   | (none)        | `<sidebar-prev-new>`         | Move the highlight to previous mailbox with new mail
-index,pager   | (none)        | `<sidebar-toggle-visible>`   | Make the Sidebar (in)visible
+| Menus       | Default Key | Function                   | Description                                          |
+|:------------|:------------|:---------------------------|:-----------------------------------------------------|
+| index,pager | (none)      | `<sidebar-next>`           | Move the highlight to next mailbox                   |
+| index,pager | (none)      | `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
+| index,pager | (none)      | `<sidebar-open>`           | Open highlighted mailbox                             |
+| index,pager | (none)      | `<sidebar-page-down>`      | Scroll the Sidebar down 1 page                       |
+| index,pager | (none)      | `<sidebar-page-up>`        | Scroll the Sidebar up 1 page                         |
+| index,pager | (none)      | `<sidebar-prev>`           | Move the highlight to previous mailbox               |
+| index,pager | (none)      | `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
+| index,pager | (none)      | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible                         |
 
 Commands
 --------
@@ -64,45 +63,44 @@ Colors
 
 **Sidebar Colors**
 
-Name                  | Default Color    | Description
---------------------- | ---------------- | ------------------------------------------------------------------
-`sidebar_divider`     | default          | The dividing line between the Sidebar and the Index/Pager panels
-`sidebar_flagged`     | default          | Mailboxes containing flagged mail
-`sidebar_highlight`   | underline        | Cursor to select a mailbox
-`sidebar_indicator`   | mutt indicator   | The mailbox open in the Index panel
-`sidebar_new`         | default          | Mailboxes containing new mail
-`sidebar_spoolfile`   | default          | Mailbox that receives incoming mail
+| Name                | Default Color  | Description                                                      |
+|:--------------------|:---------------|:-----------------------------------------------------------------|
+| `sidebar_divider`   | default        | The dividing line between the Sidebar and the Index/Pager panels |
+| `sidebar_flagged`   | default        | Mailboxes containing flagged mail                                |
+| `sidebar_highlight` | underline      | Cursor to select a mailbox                                       |
+| `sidebar_indicator` | mutt indicator | The mailbox open in the Index panel                              |
+| `sidebar_new`       | default        | Mailboxes containing new mail                                    |
+| `sidebar_spoolfile` | default        | Mailbox that receives incoming mail                              |
 
 If the
 sidebar\_indicator
-color isn't set, then the default Mutt indicator color will be used (the
-color used in the index panel).
+color isn't set, then the default Mutt indicator color will be used (the color used in the index panel).
 
 Sort
 ----
 
 **Sidebar Sort**
 
-Sort         | Description
------------- | ----------------------------
-`alpha`      | Alphabetically by path
-`count`      | Total number of messages
-`flagged`    | Number of flagged messages
-`name`       | Alphabetically by path
-`new`        | Number of new messages
-`path`       | Alphabetically by path
-`unsorted`   | Do not resort the paths
+| Sort       | Description                |
+|:-----------|:---------------------------|
+| `alpha`    | Alphabetically by path     |
+| `count`    | Total number of messages   |
+| `flagged`  | Number of flagged messages |
+| `name`     | Alphabetically by path     |
+| `new`      | Number of new messages     |
+| `path`     | Alphabetically by path     |
+| `unsorted` | Do not resort the paths    |
 
 Muttrc
 ------
 
 ```bash
 # This is a complete list of sidebar-related configuration.
-    
+
 # --------------------------------------------------------------------------
 # VARIABLES - shown with their default values
 # --------------------------------------------------------------------------
-    
+
 # Should the Sidebar be shown?
 
 set sidebar_visible = no
@@ -173,7 +171,7 @@ set sidebar_sort_method = "unsorted"
 # --------------------------------------------------------------------------
 # FUNCTIONS - shown with an example mapping
 # --------------------------------------------------------------------------
-    
+
 # Move the highlight to the previous mailbox
 
 bind index,pager \Cp sidebar-prev
@@ -214,7 +212,7 @@ bind index,pager B sidebar-toggle-visible
 # --------------------------------------------------------------------------
 # Note: All color operations are of the form:
 #       color OBJECT FOREGROUND BACKGROUND
-    
+
 # Color of the current, open, mailbox
 # Note: This is a general Mutt option which colors all selected items.
 
@@ -237,7 +235,7 @@ color sidebar_flagged red black
 color sidebar_new green black
 
 # --------------------------------------------------------------------------
-    
+
 # vim: syntax=muttrc
 ```
 
@@ -265,3 +263,4 @@ Credits
 -   Terry Chan \<tchan@lunar-linux.org\>
 -   Tyler Earnest \<tylere@rne.st\>
 -   Richard Russon \<rich@flatcap.org\>
+

@@ -6,8 +6,7 @@ Replace some temporary files with memory buffers
 Patch
 -----
 
-To check if Mutt supports “fmemopen”, look for “patch-fmemopen” in the
-mutt version.
+To check if Mutt supports "fmemopen", look for "patch-fmemopen" in the mutt version.
 
 **Dependencies**
 -   mutt-1.5.24
@@ -16,18 +15,13 @@ mutt version.
 Introduction
 ------------
 
-The “fmemopen” patch speeds up some searches.
+The "fmemopen" patch speeds up some searches.
 
-This patch changes a few places where Mutt creates temporary files. It
-replaces them with in-memory buffers. This should improve the
-performance when searching the header or body using the
-$thorough\_search option.
+This patch changes a few places where Mutt creates temporary files. It replaces them with in-memory buffers. This should improve the performance when searching the header or body using the $thorough\_search option.
 
 There are no user-configurable parts.
 
-This patch depends on `open_memstream()` and `fmemopen()`. They are
-provided by glibc. Without them, Mutt will simply create temporary
-files.
+This patch depends on `open_memstream()` and `fmemopen()`. They are provided by glibc. Without them, Mutt will simply create temporary files.
 
 Muttrc
 ------
@@ -49,3 +43,4 @@ Credits
 
 -   Julius Plenz \<plenz@cis.fu-berlin.de\>
 -   Richard Russon \<rich@flatcap.org\>
+
