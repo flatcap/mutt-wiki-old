@@ -29,7 +29,7 @@ Which can be read as:
                 } else {
                     print "Empty"
                 }
-            
+
 
 These conditions are useful, but in Mutt they cannot be nested within one another. This patch uses the notation `%<VAR?TRUE&FALSE>` and allows them to be nested.
 
@@ -41,13 +41,13 @@ A simple nested condition might be: (Some whitespace has been introduced for cla
                      %<y? XY & X >                      x>0
                           XY                            x>0,y>0
                                X                        x>0,y=0
-            
+
 
                 %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
                                      %<y? Y & NONE >    x=0
                                           Y             x=0,y>0
                                               NONE      x=0,y=0
-            
+
 
 Equivalent to:
 
@@ -64,7 +64,7 @@ Equivalent to:
                         print 'NONE'
                     }
                 }
-            
+
 
 Examples:
 
@@ -76,7 +76,7 @@ Examples:
                     display lines in message (%l)
                 else
                     display the size of the message in bytes (%c)
-            
+
 
     set index_format="%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>"
 
@@ -87,7 +87,7 @@ Examples:
                     display lines in message (%l)
                 else
                     display the size of the message in bytes (%c)
-            
+
 
 Variables
 ---------

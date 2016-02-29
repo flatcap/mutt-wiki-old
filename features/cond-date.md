@@ -116,7 +116,7 @@ This a another view of the same example, with some whitespace for clarity.
     BBB = %[%a %d]
     CCC = %[%b %d]
     DDD = %[%m/%y ]
-                
+
 
 Variables
 ---------
