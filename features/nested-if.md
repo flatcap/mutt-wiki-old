@@ -24,11 +24,11 @@ e.g.
 %?S?Size: %S&Empty?
 Which can be read as:
 
-                if (%S > 0) {
-                    print "Size: %S"
-                } else {
-                    print "Empty"
-                }
+    if (%S > 0) {
+        print "Size: %S"
+    } else {
+        print "Empty"
+    }
 
 
 These conditions are useful, but in Mutt they cannot be nested within one another. This patch uses the notation `%<VAR?TRUE&FALSE>` and allows them to be nested.
@@ -37,56 +37,56 @@ The `%<...>` notation was used to format the current local time. but that's not 
 
 A simple nested condition might be: (Some whitespace has been introduced for clarity)
 
-                %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
-                     %<y? XY & X >                      x>0
-                          XY                            x>0,y>0
-                               X                        x>0,y=0
+    %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
+            %<y? XY & X >                      x>0
+                XY                            x>0,y>0
+                    X                        x>0,y=0
 
 
-                %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
-                                     %<y? Y & NONE >    x=0
-                                          Y             x=0,y>0
-                                              NONE      x=0,y=0
+    %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
+                            %<y? Y & NONE >    x=0
+                                Y             x=0,y>0
+                                    NONE      x=0,y=0
 
 
 Equivalent to:
 
-                if (x > 0) {
-                    if (y > 0) {
-                        print 'XY'
-                    } else {
-                        print 'X'
-                    }
-                } else {
-                    if (y > 0) {
-                        print 'Y'
-                    } else {
-                        print 'NONE'
-                    }
-                }
+    if (x > 0) {
+        if (y > 0) {
+            print 'XY'
+        } else {
+            print 'X'
+        }
+    } else {
+        if (y > 0) {
+            print 'Y'
+        } else {
+            print 'NONE'
+        }
+    }
 
 
 Examples:
 
     set index_format="%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>"
 
-                if a thread is folded
-                    display the number of messages (%M)
-                else if we know how many lines in the message
-                    display lines in message (%l)
-                else
-                    display the size of the message in bytes (%c)
+    if a thread is folded
+        display the number of messages (%M)
+    else if we know how many lines in the message
+        display lines in message (%l)
+    else
+        display the size of the message in bytes (%c)
 
 
     set index_format="%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>"
 
-                if a thread is folded
-                    display the number of messages (%M)
-                    display the subject (%s)
-                else if we know how many lines in the message
-                    display lines in message (%l)
-                else
-                    display the size of the message in bytes (%c)
+    if a thread is folded
+        display the number of messages (%M)
+        display the subject (%s)
+    else if we know how many lines in the message
+        display lines in message (%l)
+    else
+        display the size of the message in bytes (%c)
 
 
 Variables
