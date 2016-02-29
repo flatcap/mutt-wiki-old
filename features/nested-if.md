@@ -38,15 +38,15 @@ The `%<...>` notation was used to format the current local time. but that's not 
 A simple nested condition might be: (Some whitespace has been introduced for clarity)
 
     %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
-            %<y? XY & X >                      x>0
-                XY                            x>0,y>0
-                    X                        x>0,y=0
+         %<y? XY & X >                      x>0
+              XY                            x>0,y>0
+                   X                        x>0,y=0
 
 
     %<x? %<y? XY & X > & %<y? Y & NONE > >  Conditions
-                            %<y? Y & NONE >    x=0
-                                Y             x=0,y>0
-                                    NONE      x=0,y=0
+                         %<y? Y & NONE >    x=0
+                              Y             x=0,y>0
+                                  NONE      x=0,y=0
 
 
 Equivalent to:
