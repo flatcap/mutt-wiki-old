@@ -115,7 +115,7 @@ Reparsed a little, for clarity, you can see the test conditions and the four for
 
 This a another view of the same example, with some whitespace for clarity.
 
-    %\<[y? %\<[m? %\<[d? AAA & BBB \> & CCC \> & DDD \>
+    %<[y? %<[m? %<[d? AAA & BBB > & CCC > & DDD >
 
     AAA = %[%H:%M ]
     BBB = %[%a %d]
