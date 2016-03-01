@@ -33,7 +33,7 @@ None
 See Also
 --------
 
-None
+-   NeoMutt project
 
 Known Bugs
 ----------

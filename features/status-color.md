@@ -103,7 +103,12 @@ color status brightwhite default 'Mutt: ([^ ]+)' 1
 See Also
 --------
 
+-   NeoMutt project
+-   Compile-Time Features
+-   Regular Expressions
+-   Patterns
 -   [[index-color patch|index-color]]
+-   Color command
 
 Known Bugs
 ----------

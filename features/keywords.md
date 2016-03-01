@@ -30,9 +30,6 @@ Overall this represents convergence path for all competing labelling/tagging/key
 
 You can change or delete the X-Label: field within Mutt using the edit-label command, bound to the y key by default. This works for tagged messages, too.
 
-Variables
----------
-
 Functions
 ---------
 
@@ -41,14 +38,6 @@ Functions
 | Menus       | Default Key | Function       | Description                              |
 |:------------|:------------|:---------------|:-----------------------------------------|
 | index,pager | y           | `<edit-label>` | add, change, or delete a message's label |
-
-Commands
---------
-
-Colors
-------
-
-None
 
 Sort
 ----
@@ -64,6 +53,11 @@ Muttrc
 
 See Also
 --------
+
+-   NeoMutt project
+-   $index\_format
+-   [[index-color patch|index-color]]
+-   folder-hook
 
 Known Bugs
 ----------

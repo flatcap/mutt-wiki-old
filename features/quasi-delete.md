@@ -44,6 +44,7 @@ bind index,pager Q quasi-delete
 See Also
 --------
 
+-   NeoMutt project
 -   [[notmuch patch|notmuch]]
 
 Known Bugs

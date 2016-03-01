@@ -131,7 +131,10 @@ set index_format="%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>"
 See Also
 --------
 
+-   NeoMutt project
 -   [[cond-date patch|cond-date]]
+-   $index\_format
+-   $status\_format
 
 Known Bugs
 ----------

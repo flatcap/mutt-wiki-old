@@ -105,8 +105,13 @@ color index_size cyan default
 See Also
 --------
 
--   ?
--   [[keyword patch|keywords]]
+-   NeoMutt project
+-   Regular Expressions
+-   Patterns
+-   $index\_format
+-   Color command
+-   [[Status-Color patch|status-color]]
+-   [[Keywords patch|keywords]]
 
 Known Bugs
 ----------

@@ -31,6 +31,8 @@ None
 See Also
 --------
 
+-   NeoMutt project
+-   Compile-Time Features
 -   `fmemopen(3)`
 
 Known Bugs

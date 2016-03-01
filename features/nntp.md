@@ -70,6 +70,9 @@ Muttrc
 See Also
 --------
 
+-   NeoMutt project
+-   Compile-Time Features
+
 Known Bugs
 ----------
 

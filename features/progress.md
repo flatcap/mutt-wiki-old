@@ -45,7 +45,8 @@ color progress white red
 See Also
 --------
 
-None
+-   NeoMutt project
+-   Color command
 
 Known Bugs
 ----------

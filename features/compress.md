@@ -164,7 +164,13 @@ close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%
 See Also
 --------
 
--   $folder\_hook
+-   NeoMutt project
+-   Compile-Time Features
+-   Regular Expressions
+-   $tmpdir
+-   $mbox\_type
+-   $save\_empty
+-   folder-hook
 
 Known Bugs
 ----------

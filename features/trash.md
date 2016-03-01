@@ -26,6 +26,7 @@ The $trash variable defines a folder in which to keep old emails. As before, fir
 The `$trash` path can be either a full directory, or be relative to the $folder variable, like the `mailboxes` command.
 
 > **Note**
+>
 > Emails deleted from the trash folder are gone forever.
 
 Variables
@@ -72,7 +73,8 @@ bind index D purge-message
 See Also
 --------
 
-None
+-   NeoMutt project
+-   folder-hook
 
 Known Bugs
 ----------

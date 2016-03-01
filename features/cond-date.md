@@ -154,6 +154,8 @@ set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]>
 See Also
 --------
 
+-   NeoMutt project
+-   $index\_format
 -   [[nested-if patch|nested-if]]
 -   `strftime(3)`
 

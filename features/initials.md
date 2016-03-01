@@ -61,6 +61,8 @@ set index_format="%4C %Z %{%b %d} %I (%?l?%4l&%4c?) %s"
 See Also
 --------
 
+-   NeoMutt project
+-   $index\_format
 -   [[index-color patch|index-color]]
 -   folder-hook
 

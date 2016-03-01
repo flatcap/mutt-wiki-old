@@ -241,6 +241,9 @@ color sidebar_new green black
 See Also
 --------
 
+-   Regular Expressions
+-   Patterns
+-   Color command
 -   [[notmuch patch|notmuch]]
 
 Known Bugs

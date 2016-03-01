@@ -64,7 +64,7 @@ ifdef imap-fetch-mail 'source ~/.mutt/imap.rc'
 See Also
 --------
 
-None
+-   NeoMutt project
 
 Known Bugs
 ----------
