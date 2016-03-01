@@ -68,7 +68,7 @@ Equivalent to:
 
 Examples:
 
-    set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>'
+    set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Bytes>>'
 
     if a thread is folded
         display the number of messages (%M)
@@ -112,7 +112,7 @@ Muttrc
 #       display lines in message (%l)
 # else display the size of the message in bytes (%c)
 
-set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>'
+set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Bytes>>'
 
 # Example 2
 # if a thread is folded
