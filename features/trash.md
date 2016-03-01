@@ -58,8 +58,8 @@ Muttrc
 
 # Folder in which to put deleted emails
 
-set trash="+Trash"
-set trash="/home/flatcap/Mail/Trash"
+set trash='+Trash'
+set trash='/home/flatcap/Mail/Trash'
 
 # The default delete key 'd' will move an email to the 'trash' folder
 # Bind 'D' to REALLY delete an email

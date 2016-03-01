@@ -68,7 +68,7 @@ Equivalent to:
 
 Examples:
 
-    set index_format="%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>"
+    set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>'
 
     if a thread is folded
         display the number of messages (%M)
@@ -78,7 +78,7 @@ Examples:
         display the size of the message in bytes (%c)
 
 
-    set index_format="%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>"
+    set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 
     if a thread is folded
         display the number of messages (%M)
@@ -112,7 +112,7 @@ Muttrc
 #       display lines in message (%l)
 # else display the size of the message in bytes (%c)
 
-set index_format="%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>"
+set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c bytes>>'
 
 # Example 2
 # if a thread is folded
@@ -123,7 +123,7 @@ set index_format="%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c byt
 # else
 #       display the size of the message in bytes (%c)
 
-set index_format="%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>"
+set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 
 # vim: syntax=muttrc
 ```

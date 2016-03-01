@@ -35,7 +35,7 @@ Muttrc
 
 # The default 'index_format' is:
 
-set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
+set index_format='%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
 
 # Where %L represents the author/recipient
 
@@ -47,7 +47,7 @@ set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
 
 # Using the %I expando:
 
-set index_format="%4C %Z %{%b %d} %I (%?l?%4l&%4c?) %s"
+set index_format='%4C %Z %{%b %d} %I (%?l?%4l&%4c?) %s'
 
 # This might look like:
 #       1   + Nov 17 DB Changesbowie    ( 689)
