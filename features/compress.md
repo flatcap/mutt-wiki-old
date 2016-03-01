@@ -14,106 +14,103 @@ To check if Mutt supports "Compress Folders", look for "+USE\_COMPRESSED" in the
 Introduction
 ------------
 
-The Compressed Folder patch allows Mutt to read mailbox files that are compressed. The patch adds three hooks to Mutt: `open-hook`, `close-hook` and `append-hook` (which is optional).
+The Compressed Folder patch allows Mutt to read mailbox files that are compressed. But it isn't limited to compressed files. It works well with encrypted files, too. In fact, if you can create a program/script to convert to and from your format, then Mutt can read it.
 
-The Compressed Folder patch isn't limited to compressed files. It works well with encrypted files, too. In fact, if you can create a program/script to convert to and from your format, then Mutt can read it.
+The patch adds three hooks to Mutt: `open-hook`, `close-hook` and `append-hook`. They define commands to: uncompress a file; compress a file; append messages to an already compressed file.
 
 There are some examples of both compressed and encrypted files, later. For now, the documentation will just concentrate on compressed files.
-
-There are three hooks defined ( open-hook, close-hookand append-hook) which define commands to uncompress and compress a folder and to append messages to an existing compressed folder respectively.
 
 Commands
 --------
 
-open-hook pattern shell-command
-close-hook pattern shell-command
-append-hook pattern shell-command
-
-> **Note**
->
-> The command should return a non-zero exit status if it fails.
-
-> **Note**
->
-> The command should not delete any files.
+    open-hook   pattern shell-command
+    close-hook  pattern shell-command
+    append-hook pattern shell-command
 
 The shell-command must contain two placeholders for filenames: `%f` and `%t`. These represent "from" and "to" filenames. It's a good idea to put quotes around these placeholders.
 
 If you need the exact string "%f" or "%t" in your command, simply double up the "%" character, e.g. "%%f" or "%%t".
 
-You do not have to provide all of the hooks.
+**Not all Hooks are Required**
 
 | Open | Close | Append | Effect                                                                             | Useful if                                         |
 |:-----|:------|:-------|:-----------------------------------------------------------------------------------|:--------------------------------------------------|
-| Open |       |        | Folder is readonly                                                                 | The folder is just a backup                       |
-| Open | Close |        | Folder is read/write, but the entire folder must be written if anything is changed | Your compression format doesn't support appending |
+| Open | -     | -      | Folder is readonly                                                                 | The folder is just a backup                       |
+| Open | Close | -      | Folder is read/write, but the entire folder must be written if anything is changed | Your compression format doesn't support appending |
 | Open | Close | Append | Folder is read/write and emails can be efficiently added to the end                | Your compression format supports appending        |
-| Open |       | Append | Folder is readonly, but can be appended to                                         | You want to store emails, but never change them   |
+| Open | -     | Append | Folder is readonly, but can be appended to                                         | You want to store emails, but never change them   |
 
-### Example 1
+> **Note**
+>
+> The command:
+> -   should return a non-zero exit status on failure
+> -   should not delete any files
 
-    open-hook '\.gz$' "gzip -cd '%f' > '%t'"
-
-When Mutt is asked to open a file, it first checks if there's a matching `open-hook`. The hook, above, will match any files whose name ends ".gz". That causes Mutt to run the `gzip` command to create a readable version.
-
-### Open a compressed mailbox for reading
+### Read from compressed mailbox
 
     open-hook regexp shell-command
 
+If Mutt is unable to open a file, it then looks for `open-hook` that matches the filename.
+
+If your compression program doesn't have a well-defined extension, then you can use `.` as the regexp.
+
+#### Example of open-hook
+
     open-hook '\.gz$' "gzip -cd '%f' > '%t'"
 
-### Write a compressed mailbox
+-   Mutt finds a file, "example.gz", that it can't read
+-   Mutt has an `open-hook` whose regexp matches the filename: `\.gz$`
+-   Mutt uses the command `gzip -cd` to create a temporary file that it *can* read
+
+### Write to a compressed mailbox
 
     close-hook regexp shell-command
 
+When Mutt has finished with a compressed mail folder, it will look for a matching `close-hook` to recompress the file. This hook is optional.
+
+> **Note**
+>
+> If the folder has not been modifed, the
+> close-hook
+> will not be called.
+
+#### Example of close-hook
+
     close-hook '\.gz$' "gzip -c '%t' > '%f'"
 
-This is used to close the folder that was open with the
-open-hook
-command after some changes were made to it. Temporary folder in this case is the folder previously produced by the
-open-hook
-command.
-close-hook
-is not called when you exit from the folder if the folder was not changed.
+-   Mutt has finished with a folder, "example.gz", that it opened with `open-hook`
+-   The folder has been modified
+-   Mutt has a `close-hook` whose regexp matches the filename: `\.gz$`
+-   Mutt uses the command `gzip -c` to create a new compressed file
 
-### Append a message to a compressed mailbox
+### Append to a compressed mailbox
 
-append-hook regexp shell-command append-hook '\\.gz$' "gzip -c '%t' \>\> '%f'"
-Usage:
+    append-hook regexp shell-command
 
-When
-append-hook
-is used, the folder is not opened, which saves time, but this means that we can not find out what the folder type is. Thus the default (
-$mbox\_type
-) type is always supposed (i.e. this is the format used for the temporary folder). If the file does not exist when you save to it,
-close-hook
-is called, and not
-append-hook
-.
-append-hook
-is only for appending to existing folders. If the
-command
-is empty, this operation is disabled for this file type. In this case, the folder will be open and closed again (using
-open-hook
-and
-close-hook
-respectively) each time you will add to it.
+When Mutt wants to append an email to a compressed mail folder, it will look for a matching `append-hook`. This hook is optional.
 
-### empty files
+Using the `append-hook` will save time, but Mutt won't be able to determine the type of the mail folder inside the compressed file.
 
-Note that Mutt will only try to use hooks if the file is not in one of the accepted formats. In particular, if the file is empty, mutt supposes it is not compressed. This is important because it allows the use of programs that do not have well defined extensions. Just use
-.
-as a regexp. But this may be surprising if your compressing script produces empty files. In this situation, unset
-$save\_empty
-, so that the compressed file will be removed if you delete all of the messages.
+Mutt will *assume* the type to be that of the `$mbox_type` variable. Mutt also uses this type for temporary files.
 
-### security
+Mutt will only use the `append-hook` for existing files. The `close-hook` will be used for empty, or missing files.
 
-Note:
-the folder is temporary stored decrypted in the /tmp directory, where it can be read by your system administrator. So think about the security aspects of this.
-Please note, that PGP does not support appending to an encrypted folder, so there is no append-hook defined.
+#### Example of append-hook
 
-In addition, the user can provide a script that gets a folder in an accepted format and appends its context to the folder in the user-defined format, which may be faster than converting the entire folder to the accepted format, appending to it and converting back to the user-defined format.
+    append-hook '\.gz$' "gzip -c '%t' >> '%f'"
+
+-   Mutt wants to append an email to a folder, "example.gz", that it opened with `open-hook`
+-   Mutt has an `append-hook` whose regexp matches the filename: `\.gz$`
+-   Mutt knows the mailbox type from the `$mbox` variable
+-   Mutt uses the command `gzip -c` to append to an existing compressed file
+
+### Empty Files
+
+Mutt assumes that an empty file is not compressed. In this situation, unset $save\_empty, so that the compressed file will be removed if you delete all of the messages.
+
+### Security
+
+Encrypted files are decrypted into temporary files which are stored in the $tmpdir directory. This could be a security risk.
 
 Muttrc
 ------
@@ -150,11 +147,13 @@ close-hook  '\.xz$'  "xz    -c  '%t' >  '%f'"
 append-hook '\.xz$'  "xz    -c  '%t' >> '%f'"
 
 # Hander for pgp encrypted mailboxes
+# PGP does not support appending to an encrypted file
 
 open-hook   '\.pgp$' "pgp -f < '%f' > '%t'"
 close-hook  '\.pgp$' "pgp -fe YourPgpUserIdOrKeyId < '%t' > '%f'"
 
 # Hander for gpg encrypted mailboxes
+# gpg does not support appending to an encrypted file
 
 open-hook   '\.gpg$' "gpg --decrypt < '%f' > '%t'"
 close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%f'"
@@ -170,7 +169,7 @@ See Also
 Known Bugs
 ----------
 
--   Patch cannot deal with filenames that contains quotes/apostrophes.
+-   The Compressed Folder hooks cannot deal with filenames that contains quotes/apostrophes.
 
 Credits
 -------
