@@ -21,6 +21,22 @@ Introduction
 Variables
 ---------
 
+**Notmuch Variables**
+
+| Name                | Type    | Default                                                           |
+|:--------------------|:--------|:------------------------------------------------------------------|
+| `nm_db_limit`       | number  | `0`                                                               |
+| `nm_default_uri`    | string  | (empty)                                                           |
+| `nm_exclude_tags`   | string  | (empty)                                                           |
+| `nm_hidden_tags`    | string  | `unread,draft,flagged,passed,replied,attachment,signed,encrypted` |
+| `nm_open_timeout`   | number  | `5`                                                               |
+| `nm_query_type`     | string  | `messages`                                                        |
+| `nm_record`         | boolean | `no`                                                              |
+| `nm_record_tags`    | string  | (empty)                                                           |
+| `nm_unread_tag`     | string  | `unread`                                                          |
+| `vfolder_format`    | string  | `%6n(%6N) %f`                                                     |
+| `virtual_spoolfile` | boolean | `no`                                                              |
+
 Functions
 ---------
 
@@ -37,6 +53,12 @@ Functions
 
 Commands
 --------
+
+**Notmuch Commands**
+
+virtual-mailboxes description notmuch-URI { description notmuch-URI ...}
+tag-transforms tag transformed-string { tag transformed-string ...}
+tag-formats tag format-string { tag format-string ...}
 
 Colors
 ------

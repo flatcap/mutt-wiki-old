@@ -14,8 +14,40 @@ To check if Mutt supports "NNTP", look for "+USE\_NNTP" in the mutt version.
 Introduction
 ------------
 
+Reading news via NNTP
+
+If compiled with *--enable-nntp* option, Mutt can read news from news server via NNTP. You can open a newsgroup with function \`\`change-newsgroup'' (default: \`\`i''). Default news server can be obtained from `$NNTPSERVER` environment variable or from `/etc/nntpserver` file. Like other news readers, info about subscribed newsgroups is saved in file by $newsrc variable. The variable $news\_cache\_dir can be used to point to a directory. Mutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for. Also the hierarchy is used to store header cache if Mutt was compiled with header cache support.
+
 Variables
 ---------
+
+**NNTP Variables**
+
+| Name                    | Type    | Default                     |
+|:------------------------|:--------|:----------------------------|
+| `ask_follow_up`         | boolean | `no`                        |
+| `ask_x_comment_to`      | boolean | `no`                        |
+| `catchup_newsgroup`     | quad    | `ask-yes`                   |
+| `followup_to_poster`    | quad    | `ask-yes`                   |
+| `group_index_format`    | string  | `%4C %M%N %5s  %-45.45f %d` |
+| `inews`                 | string  | (empty)                     |
+| `mime_subject`          | boolean | `yes`                       |
+| `newsgroups_charset`    | string  | `utf-8`                     |
+| `newsrc`                | string  | `~/.newsrc`                 |
+| `news_cache_dir`        | string  | `~/.mutt`                   |
+| `news_server`           | string  | (empty)                     |
+| `nntp_authenticators`   | string  | (empty)                     |
+| `nntp_context`          | number  | `1000`                      |
+| `nntp_listgroup`        | boolean | `yes`                       |
+| `nntp_load_description` | boolean | `yes`                       |
+| `nntp_pass`             | string  | (empty)                     |
+| `nntp_poll`             | number  | `60`                        |
+| `nntp_user`             | string  | (empty)                     |
+| `post_moderated`        | quad    | `ask-yes`                   |
+| `save_unsubscribed`     | boolean | `no`                        |
+| `show_new_news`         | boolean | `yes`                       |
+| `show_only_unread`      | boolean | `no`                        |
+| `x_comment_to`          | boolean | `no`                        |
 
 Functions
 ---------

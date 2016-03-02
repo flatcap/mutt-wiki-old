@@ -30,6 +30,17 @@ Overall this represents convergence path for all competing labelling/tagging/key
 
 You can change or delete the X-Label: field within Mutt using the edit-label command, bound to the y key by default. This works for tagged messages, too.
 
+Variables
+---------
+
+**Keyword Variables**
+
+| Name                | Type    | Default |
+|:--------------------|:--------|:--------|
+| `keywords_legacy`   | boolean | `yes`   |
+| `keywords_standard` | boolean | `no`    |
+| `xlabel_delimiter`  | string  | (empty) |
+
 Functions
 ---------
 
