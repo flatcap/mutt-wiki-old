@@ -19,37 +19,39 @@ Variables
 
 **Sidebar Variables**
 
-| Name                    | Type    | Default                      |
-|:------------------------|:--------|:-----------------------------|
-| `sidebar_delim_chars`   | string  | `/.`                         |
-| `sidebar_divider_char`  | string  | `|`                          |
-| `sidebar_folder_indent` | boolean | `no`                         |
-| `sidebar_format`        | string  | `%B%?F? [%F]?%* %?N?%N/?%4S` |
-| `sidebar_indent_string` | string  | `  ` (two spaces)            |
-| `sidebar_new_mail_only` | boolean | `no`                         |
-| `sidebar_next_new_wrap` | boolean | `no`                         |
-| `sidebar_refresh_time`  | number  | `60`                         |
-| `sidebar_short_path`    | boolean | `no`                         |
-| `sidebar_sort_method`   | enum    | `SORT_ORDER`                 |
-| `sidebar_visible`       | boolean | `no`                         |
-| `sidebar_whitelist`     | list    | (empty)                      |
-| `sidebar_width`         | number  | `20`                         |
+| Name                    | Type    | Default                     |
+|:------------------------|:--------|:----------------------------|
+| `sidebar_delim_chars`   | string  | `/.`                        |
+| `sidebar_divider_char`  | string  | `|`                         |
+| `sidebar_folder_indent` | boolean | `no`                        |
+| `sidebar_format`        | string  | `%B%?F? [%F]?%* %?N?%N/?%S` |
+| `sidebar_indent_string` | string  | `  ` (two spaces)           |
+| `sidebar_new_mail_only` | boolean | `no`                        |
+| `sidebar_next_new_wrap` | boolean | `no`                        |
+| `sidebar_refresh_time`  | number  | `60`                        |
+| `sidebar_short_path`    | boolean | `no`                        |
+| `sidebar_sort_method`   | enum    | `SORT_ORDER`                |
+| `sidebar_visible`       | boolean | `no`                        |
+| `sidebar_whitelist`     | list    | (empty)                     |
+| `sidebar_width`         | number  | `20`                        |
 
 Functions
 ---------
 
 **Sidebar Functions**
 
-| Menus       | Default Key | Function                   | Description                                          |
-|:------------|:------------|:---------------------------|:-----------------------------------------------------|
-| index,pager | (none)      | `<sidebar-next>`           | Move the highlight to next mailbox                   |
-| index,pager | (none)      | `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
-| index,pager | (none)      | `<sidebar-open>`           | Open highlighted mailbox                             |
-| index,pager | (none)      | `<sidebar-page-down>`      | Scroll the Sidebar down 1 page                       |
-| index,pager | (none)      | `<sidebar-page-up>`        | Scroll the Sidebar up 1 page                         |
-| index,pager | (none)      | `<sidebar-prev>`           | Move the highlight to previous mailbox               |
-| index,pager | (none)      | `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
-| index,pager | (none)      | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible                         |
+Sidebar adds the following functions to Mutt. By default, none of them are bound to keys.
+
+| Menus       | Function                   | Description                                          |
+|:------------|:---------------------------|:-----------------------------------------------------|
+| index,pager | `<sidebar-next>`           | Move the highlight to next mailbox                   |
+| index,pager | `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
+| index,pager | `<sidebar-open>`           | Open highlighted mailbox                             |
+| index,pager | `<sidebar-page-down>`      | Scroll the Sidebar down 1 page                       |
+| index,pager | `<sidebar-page-up>`        | Scroll the Sidebar up 1 page                         |
+| index,pager | `<sidebar-prev>`           | Move the highlight to previous mailbox               |
+| index,pager | `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
+| index,pager | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible                         |
 
 Commands
 --------
@@ -150,7 +152,7 @@ set sidebar_divider_char = "|"
 
 # Display the Sidebar mailboxes using this format string.
 
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%4S"
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 
 # Sidebar will not refresh its list of mailboxes any more frequently than
 # this number of seconds.  This will help reduce disk/network traffic.
