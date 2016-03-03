@@ -29,7 +29,6 @@ Variables
 | `sidebar_new_mail_only` | boolean | `no`                         |
 | `sidebar_next_new_wrap` | boolean | `no`                         |
 | `sidebar_refresh_time`  | number  | `60`                         |
-| `sidebar_scrollbar`     | boolean | `no`                         |
 | `sidebar_short_path`    | boolean | `no`                         |
 | `sidebar_sort_method`   | enum    | `SORT_ORDER`                 |
 | `sidebar_visible`       | boolean | `no`                         |
@@ -62,14 +61,14 @@ Colors
 
 **Sidebar Colors**
 
-| Name                | Default Color  | Description                                                      |
-|:--------------------|:---------------|:-----------------------------------------------------------------|
-| `sidebar_divider`   | default        | The dividing line between the Sidebar and the Index/Pager panels |
-| `sidebar_flagged`   | default        | Mailboxes containing flagged mail                                |
-| `sidebar_highlight` | underline      | Cursor to select a mailbox                                       |
-| `sidebar_indicator` | mutt indicator | The mailbox open in the Index panel                              |
-| `sidebar_new`       | default        | Mailboxes containing new mail                                    |
-| `sidebar_spoolfile` | default        | Mailbox that receives incoming mail                              |
+| Name                | Default Color    | Description                                                      |
+|:--------------------|:-----------------|:-----------------------------------------------------------------|
+| `sidebar_divider`   | default          | The dividing line between the Sidebar and the Index/Pager panels |
+| `sidebar_flagged`   | default          | Mailboxes containing flagged mail                                |
+| `sidebar_highlight` | underline        | Cursor to select a mailbox                                       |
+| `sidebar_indicator` | mutt `indicator` | The mailbox open in the Index panel                              |
+| `sidebar_new`       | default          | Mailboxes containing new mail                                    |
+| `sidebar_spoolfile` | default          | Mailbox that receives incoming mail                              |
 
 If the
 sidebar\_indicator
