@@ -36,7 +36,6 @@ Muttrc
 
 # Set the color of the progress bar
 # White text on a red background
-
 color progress white red
 
 # vim: syntax=muttrc

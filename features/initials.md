@@ -34,9 +34,7 @@ Muttrc
 # which can be used in the 'index_format' variable.
 
 # The default 'index_format' is:
-
 set index_format='%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
-
 # Where %L represents the author/recipient
 
 # This might look like:
@@ -46,7 +44,6 @@ set index_format='%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
 #       4   + Nov 16 Debbie Harry  Parallel Lines  ( 540)
 
 # Using the %I expando:
-
 set index_format='%4C %Z %{%b %d} %I (%?l?%4l&%4c?) %s'
 
 # This might look like:

@@ -129,32 +129,27 @@ Muttrc
 # The 'append-hook' is optional.
 
 # Hander for gzip compressed mailboxes
-
 open-hook   '\.gz$'  "gzip -cd  '%f' >  '%t'"
 close-hook  '\.gz$'  "gzip -c   '%t' >  '%f'"
 append-hook '\.gz$'  "gzip -c   '%t' >> '%f'"
 
 # Hander for bzip2 compressed mailboxes
-
 open-hook   '\.bz2$' "bzip2 -cd '%f' >  '%t'"
 close-hook  '\.bz2$' "bzip2 -c  '%t' >  '%f'"
 append-hook '\.bz2$' "bzip2 -c  '%t' >> '%f'"
 
 # Hander for xz compressed mailboxes
-
 open-hook   '\.xz$'  "xz    -cd '%f' >  '%t'"
 close-hook  '\.xz$'  "xz    -c  '%t' >  '%f'"
 append-hook '\.xz$'  "xz    -c  '%t' >> '%f'"
 
 # Hander for pgp encrypted mailboxes
 # PGP does not support appending to an encrypted file
-
 open-hook   '\.pgp$' "pgp -f < '%f' > '%t'"
 close-hook  '\.pgp$' "pgp -fe YourPgpUserIdOrKeyId < '%t' > '%f'"
 
 # Hander for gpg encrypted mailboxes
 # gpg does not support appending to an encrypted file
-
 open-hook   '\.gpg$' "gpg --decrypt < '%f' > '%t'"
 close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%f'"
 

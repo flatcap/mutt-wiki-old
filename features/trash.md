@@ -57,7 +57,6 @@ Muttrc
 # When mail is deleted it will be moved to this folder.
 
 # Folder in which to put deleted emails
-
 set trash='+Trash'
 set trash='/home/flatcap/Mail/Trash'
 

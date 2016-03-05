@@ -111,7 +111,6 @@ Muttrc
 # else if we know how many lines in the message
 #       display lines in message (%l)
 # else display the size of the message in bytes (%c)
-
 set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Bytes>>'
 
 # Example 2
@@ -122,7 +121,6 @@ set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Byt
 #       display lines in message (%l)
 # else
 #       display the size of the message in bytes (%c)
-
 set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 
 # vim: syntax=muttrc

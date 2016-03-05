@@ -47,15 +47,12 @@ Muttrc
 # where item is a Mutt variable, function or command
 #
 # If the 'trash' variable exists, set it.
-
 ifdef trash 'set trash=~/Mail/trash'
 
 # If the 'tag-pattern' function exists, bind a key to it.
-
 ifdef tag-pattern 'bind index <F6> tag-pattern'
 
 # If the 'imap-fetch-mail' command exists, read my IMAP config.
-
 ifdef imap-fetch-mail 'source ~/.mutt/imap.rc'
 
 # vim: syntax=muttrc
