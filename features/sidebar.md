@@ -14,6 +14,12 @@ To check if Mutt supports "Sidebar", look for "+USE\_SIDEBAR" in the mutt versio
 Introduction
 ------------
 
+The Sidebar shows a list of all your mailboxes. The list can be turned on and off, it can be themed and the list style can be configured.
+
+This part of the manual is a reference guide. If you want a simple introduction with examples see the Sidebar Howto. If you just want to get started, you could use the sample Sidebar muttrc.
+
+This version of Sidebar is based on Terry Chan's [2015-11-11 release](http://www.lunar-linux.org/mutt-sidebar/). It contains many **new features**, lots of **bugfixes**.
+
 Variables
 ---------
 
