@@ -20,8 +20,8 @@ Mutt's format strings can contain embedded if-then-else conditions. They are of 
 
 If the variable "VAR" has a value greater than zero, print the "TRUE" string, otherwise print the "FALSE" string.
 
-e.g.
-%?S?Size: %S&Empty?
+e.g. '%?S?Size: %S&Empty?'
+
 Which can be read as:
 
     if (%S > 0) {
