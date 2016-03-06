@@ -71,6 +71,7 @@ color status brightred white '(New|Del|Flag):[0-9]+'
 # Highlight mailbox ordering if it's different from the default
 # First, highlight anything (*/*)
 color status brightred default '\([^)]+/[^)]+\)'
+
 # Then override the color for one specfic case
 color status default   default '\(threads/last-date-received\)'
 
@@ -80,11 +81,13 @@ color status default   default '\(threads/last-date-received\)'
 
 # Highlight the contents of the []s but not the [] themselves
 color status red default '\[([^]]+)\]' 1
+
 # The '1' refers to the first regex submatch, which is the inner
 # part in ()s
 
 # Highlight the mailbox
 color status brightwhite default 'Mutt: ([^ ]+)' 1
+
 # Search for 'Mutt: ' but only highlight what comes after it
 
 # vim: syntax=muttrc

@@ -35,6 +35,7 @@ Muttrc
 
 # The default 'index_format' is:
 set index_format='%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+
 # Where %L represents the author/recipient
 
 # This might look like:

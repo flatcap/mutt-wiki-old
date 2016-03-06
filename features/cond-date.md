@@ -138,7 +138,6 @@ Muttrc
 #       '%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
 #
 # We replace the date field '%{%b %d}', giving:
-
 set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-15.15L (%?l?%4l&%4c?) %s'
 
 # Test  Date Range  Format String  Example

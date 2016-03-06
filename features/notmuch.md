@@ -56,9 +56,9 @@ Commands
 
 **Notmuch Commands**
 
-virtual-mailboxes description notmuch-URI { description notmuch-URI ...}
-tag-transforms tag transformed-string { tag transformed-string ...}
-tag-formats tag format-string { tag format-string ...}
+    virtual-mailboxes description notmuch-URI { description notmuch-URI ...}
+    tag-transforms tag transformed-string { tag transformed-string ...}
+    tag-formats tag format-string { tag format-string ...}
 
 Colors
 ------

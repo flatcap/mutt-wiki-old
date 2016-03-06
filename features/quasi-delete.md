@@ -35,7 +35,6 @@ Muttrc
 
 # The 'quasi-delete' function marks an email that should be hidden
 # from the index, but NOT deleted.
-
 bind index,pager Q quasi-delete
 
 # vim: syntax=muttrc
