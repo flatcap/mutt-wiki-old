@@ -88,7 +88,7 @@ NeoMutt also have a couple of speculative ideas:
 ## Current Development
 
 The development is done in [FlatCap's repo](https://github.com/neomutt/flatcap).
-To understand the layout, this [Repository Diagram](https://flatcap.org/flatcap.png) may help.
+To understand the layout, this [Repository Diagram](https://flatcap.org/mutt/flatcap.png) may help.
 
 **Note:** This repository is under **heavy** development and anything you see
 today, may be gone _later_ today.
