@@ -55,6 +55,8 @@ None
 Credits
 -------
 
+-   Rocco Rutte \<pdmef@gmx.net\>
+-   Vincent Lefevre \<vincent@vinc17.org\>
 -   Stefan Kuhn \<wuodan@hispeed.ch\>
 -   Karel Zak \<kzak@redhat.com\>
 -   Richard Russon \<rich@flatcap.org\>

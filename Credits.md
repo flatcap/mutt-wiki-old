@@ -51,6 +51,7 @@ The patches, bug fixes and documentation are the hard work of these people.
 - Phil Pennock \<mutt-dev@spodhuis.demon.nl\>
 - Philippe Le Brouster \<plb@nebkha.net\>
 - Richard Russon \<rich@flatcap.org\>
+- Rocco Rutte \<pdmef@gmx.net\>
 - Roland Rosenfeld \<roland@spinnaker.de\>
 - Sami Farin \<hvtaifwkbgefbaei@gmail.com\>
 - Stefan Assmann \<sassmann@kpanic.de\>
@@ -62,6 +63,7 @@ The patches, bug fixes and documentation are the hard work of these people.
 - Tim Stoakes \<tim@stoakes.net\>
 - Tyler Earnest \<tylere@rne.st\>
 - V&iacute;ctor Manuel J&aacute;quez Leal \<vjaquez@igalia.com\>
+- Vincent Lefevre \<vincent@vinc17.org\>
 - Vladimir Marek \<Vladimir.Marek@oracle.com\>
 - Vsevolod Volkov \<vvv@mutt.org.ua\>
 
