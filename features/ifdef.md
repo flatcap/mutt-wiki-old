@@ -14,20 +14,27 @@ To check if Mutt supports "ifdef", look for "patch-ifdef" in the mutt version.
 Introduction
 ------------
 
-The "ifdef" command tests whether Mutt understands the name of a variable, function of command. If it does, then it executes a config command.
+The "ifdef" patch introduces three new commands to Mutt and allow you to share one config file between versions of Mutt that may have different features compiled in.
 
-This useful command allows you to share one config file between versions of Mutt that may have different features compiled in.
+    ifdef  symbol config-command [args...]  # If a symbol is defined
+    ifndef symbol config-command [args...]  # If a symbol is not defined
+    finish                                  # Finish reading the current file
 
-The command is of the form:
+Here a symbol can be a $variable, \<function\>, command or compile-time symbol, such as "USE\_IMAP".
 
-    ifdef <item> <config-command>
+`finish` is particularly useful when combined with `ifndef`. e.g.
 
-where "item" can be the name of a $variable, \<function\> or command.
+```bash
+# Sidebar config file
+ifndef USE_SIDEBAR finish
+```
 
 Commands
 --------
 
-    ifdef item "config-command [args]"
+    ifdef  symbol "config-command [args]"
+    ifndef symbol "config-command [args]"
+    finish
 
 Muttrc
 ------
@@ -35,17 +42,22 @@ Muttrc
 ```bash
 # Example Mutt config file for the 'ifdef' feature.
 
+# This feature introduces three useful commands which allow you to share
+# one config file between versions of Mutt that may have different
+# features compiled in.
+
+#   ifdef  symbol config-command [args...]
+#   ifndef symbol config-command [args...]
+#   finish
+
 # The 'ifdef' command tests whether Mutt understands the name of
-# a variable, function of command.  If it does, then it executes a
-# config command.
+# a variable, function, command or compile-time symbol.
+# If it does, then it executes a config command.
 
-# This useful command allows you to share one config file between
-# versions of Mutt that may have different features compiled in.
+# The 'ifndef' command tests whether a symbol does NOT exist.
 
-# The command is of the form:
-#       ifdef item 'config-command params'
-# where item is a Mutt variable, function or command
-#
+# The 'finish' command tells Mutt to stop reading current config file.
+
 # If the 'trash' variable exists, set it.
 ifdef trash 'set trash=~/Mail/trash'
 
@@ -54,6 +66,10 @@ ifdef tag-pattern 'bind index <F6> tag-pattern'
 
 # If the 'imap-fetch-mail' command exists, read my IMAP config.
 ifdef imap-fetch-mail 'source ~/.mutt/imap.rc'
+
+# If the compile-time symbol 'USE_SIDEBAR' does not exist, then
+# stop reading the current config file.
+ifndef USE_SIDEBAR finish
 
 # vim: syntax=muttrc
 ```
