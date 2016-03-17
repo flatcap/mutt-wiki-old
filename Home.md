@@ -9,21 +9,24 @@ Hopefully this will build the community and reduce duplicated effort.
 
 ### Latest news
 
-- [[2016-03-17 - NotMuch, IfDef|News#]]
-- [[2016-03-07 - First **NeoMutt** release|News#]]
+- [[2016-03-17 - NotMuch, IfDef|News#2016-03-17---notmuch-ifdef]]
+- [[2016-03-07 - First NeoMutt release|News#2016-03-07---first-neomutt-release]]
 
 ### Features
 
 NeoMutt adds a couple of major features to Mutt:
 
-- **[[sidebar]]** | Panel containing list of Mailboxes
-- **[[notmuch]]** | Powerful email search engine
+- **[[Sidebar]]** - Panel containing list of Mailboxes
+- **[[NotMuch]]** - Powerful email search engine
 
 and lots of minor features:
 
-**[[cond-date]]**, **[[fmemopen]]**, **[[ifdef]]**, **[[index-color]]**,
-**[[initials]]**, **[[nested-if]]**, **[[progress]]**, **[[quasi-delete]]**,
-**[[status-color]]**, **[[tls-sni]]**, **[[trash]]**.
+**[[Conditional Dates|cond-date]]**, **[[Fmemopen|fmemopen]]**,
+**[[Ifdef|ifdef]]**, **[[Index Color|index-color]]**,
+**[[Initials Expando|initials]]**, **[[Nested If|nested-if]]**,
+**[[Progress Bar|progress]]**, **[[Quasi-Delete|quasi-delete]]**,
+**[[Status Color|status-color]]**, **[[TLS-SNI|tls-sni]]**,
+**[[Trash Folder|trash]]**.
 
 *[[Read more...|Features]]*
 

@@ -12,7 +12,7 @@ This requires the installation of "notmuch".
 [[Ifdef|ifdef]] adds new config functions `ifndef` and `finish` to allow
 flexible configuration.
 
-[https://github.com/neomutt/neomutt/releases/download/neomutt-20160317/neomutt-patches-20160317.tar.gz](Patches)
+**[Download NeoMutt Patches](https://github.com/neomutt/neomutt/releases/download/neomutt-20160317/neomutt-patches-20160317.tar.gz)**
 
 "neomutt-20160317.patch" is all the patches rolled into one.
 
@@ -41,7 +41,7 @@ These patches apply to **Mutt-1.5.24.**
 | [[tls-sni]]      | **negotiate for a certificate**          |
 | [[trash]]        | **move 'deleted' emails to a trash bin** |
 
-[https://github.com/neomutt/neomutt/releases/download/neomutt-20160307/neomutt-patches-20160307.tar.gz](Patches)
+**[Download NeoMutt Patches](https://github.com/neomutt/neomutt/releases/download/neomutt-20160307/neomutt-patches-20160307.tar.gz)**
 
 "neomutt-20160307.patch" is all the patches rolled into one.
 
