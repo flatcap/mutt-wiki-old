@@ -1,95 +1,37 @@
-# Welcome to the NeoMutt Project
+## Welcome to the NeoMutt Project
 
-## What is NeoMutt?
+### About
 
-A place to gather all the patches against Mutt.
-
-A place for all the developers to gather.
-Especially those who have made changes to Mutt, but haven't had those changes
-accepted.
-
+NeoMutt is a place to gather Mutt patches and Mutt developers.
 Hopefully this will build the community and reduce duplicated effort.
 
-### "NeoMutt"?
+*[[Read more...|About]]*
 
-NeoMutt is just a name.  When [FlatCap](https://github.com/flatcap) created the
-project, he needed a name that was unused on GitHub.
+### Latest news
 
-### Is it a Fork?
+- [[2016-03-17 - NotMuch, IfDef|News#]]
+- [[2016-03-07 - First **NeoMutt** release|News#]]
 
-It's not a fork of Mutt.
+### Features
 
-It's a large set of feature patches (big and small) that apply to Mutt-1.5.24.
+NeoMutt adds a couple of major features to Mutt:
 
-## Why?
+- **[[sidebar]]** | Panel containing list of Mailboxes
+- **[[notmuch]]** | Powerful email search engine
 
-- Reduce duplication
-- Get patches in a state to be accepted upstream
+and lots of minor features:
 
-Many hundreds of Mutt users have taken the time to patch Mutt to add features.
-Unfortunately, it's usually the same patches as everyone else and effort is
-wasted.
+**[[cond-date]]**, **[[fmemopen]]**, **[[ifdef]]**, **[[index-color]]**,
+**[[initials]]**, **[[nested-if]]**, **[[progress]]**, **[[quasi-delete]]**,
+**[[status-color]]**, **[[tls-sni]]**, **[[trash]]**.
 
-Also, there are some heroic developers who have been maintaining multi-thousand
-line patches:
+*[[Read more...|Features]]*
 
-- Notmuch patch >4 years
-- Sidebar patch >10 years
-- NNTP patch >15 years
+### Development
 
-This is insane.
+The main aim of NeoMutt Developemnt is to find, tidy and release existing
+patches for Mutt.  If there's a patch you would like to see in Mutt, you can add
+an [Issue](https://github.com/neomutt/neomutt/issues) to let me know.
 
-## What's been done so far?
-
-### Additions to Mutt
-
-[[Sidebar]] has been completely overhauled, merging features, fixing bugs,
-tidying code and documenting the results.
-
-[[Notmuch]] has been brought up-to-date, against Mutt-1.5.24.  It has been split
-out of the [mutt-kz repo](https://github.com/karelzak/mutt-kz) and refactored
-slightly.
-
-Eleven smaller [[Features|Features#minor-features]] have been tidied and
-documented.
-
-Stable features will be pushed into branches in the
-[NeoMutt repo](https://github.com/neomutt/neomutt).
-
-### Blue Sky
-
-NeoMutt also have a couple of speculative ideas:
-
-- Redesigning Mutt's [architecture](https://github.com/neomutt/arch#arch)
-- Redesigning Mutt's [gui](https://github.com/neomutt/panel-manager#panel-manager)
-
-**Note:** These are just toys (for now).
-
-## What's next?
-
-- More Features
-    These still need tidying up
-    * Compressed Folders
-    * Keywords
-    * NNTP
-
-- Yet More Features
-    * There are a few more features that may be appealing to a larger audience.
-
-- Lots of bugfixes
-    * The downstream Distros have a lot of bugfixes that need integrating
-
-- Better Sidebar Integration
-    * Sidebar and Notmuch should work better together
-    * NNTP would really benefit from using Sidebar
-
-- Getting Changes Accepted Upstream
-
-## Current Development
-
-The development is done in [FlatCap's repo](https://github.com/neomutt/flatcap).
-To understand the layout, this [Repository Diagram](https://flatcap.org/mutt/flatcap.png) may help.
-
-**Note:** This repository is under **heavy** development and anything you see
-today, may be gone _later_ today.
+*[[Read more...|Development]]*
 

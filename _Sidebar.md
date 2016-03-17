@@ -1,4 +1,8 @@
 - **[[Home]]**
+    * [[About]]
+    * [[News]]
+    * [[Credits]]
+    * [[Obsolescence]]
 - **[[Features]]**
     * [[Conditional Dates|cond-date]]
     * [[Fmemopen|fmemopen]]
@@ -13,10 +17,9 @@
     * [[Status Color|status-color]]
     * [[TLS-SNI|tls-sni]]
     * [[Trash Folder|trash]]
-- **[[Work in Progress]]**
+- **[[Development]]**
     * [[Compressed Folders|compress]]
     * [[Keywords|keywords]]
     * [[NNTP|nntp]]
-- **Misc**
-    * [[Credits]]
-    * [[Obsolescence]]
+    * [[Sensible Browser|sensible-browser]]
+    * [[Skip Quoted|skip-quoted]]
