@@ -4,6 +4,7 @@
     * [[Credits]]
     * [[Obsolescence]]
 - **[[Features]]**
+    * [[Bug Fixes|bug-fixes]]
     * [[Conditional Dates|cond-date]]
     * [[Fmemopen|fmemopen]]
     * [[Ifdef|ifdef]]

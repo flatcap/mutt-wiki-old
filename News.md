@@ -1,4 +1,12 @@
-# 2016-03-17 - NotMuch, IfDef
+## <a name="2016-03-20"></a>2016-03-20 - Bug-fixes Page
+
+Added a [[bug-fixes page|bug-fixes]] to list the changes to Mutt.
+
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
+
+---
+
+## <a name="2016-03-17"></a>2016-03-17 - NeoMutt Release: NotMuch, IfDef
 
 These patches apply to **Mutt-1.5.24.**
 
@@ -16,18 +24,17 @@ flexible configuration.
 
 "neomutt-20160317.patch" is all the patches rolled into one.
 
-[Rich Russon (FlatCap)](https://github.com/flatcap)
-rich@flatcap.org
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
 
 ---
 
-# 2016-03-07 - First **NeoMutt** release
+## <a name="2016-03-07"></a>2016-03-07 - NeoMutt Release: "First **NeoMutt** release"
 
 These patches apply to **Mutt-1.5.24.**
 
 | Patch            | Description                              |
 |:-----------------|:-----------------------------------------|
-| bug-fixes        | **various bug fixes**                    |
+| [[bug-fixes]]    | **various bug fixes**                    |
 | [[cond-date]]    | **use rules to choose date format**      |
 | [[fmemopen]]     | **use memory buffers instead of files**  |
 | [[ifdef]]        | **conditional config options**           |
@@ -45,6 +52,5 @@ These patches apply to **Mutt-1.5.24.**
 
 "neomutt-20160307.patch" is all the patches rolled into one.
 
-[Rich Russon (FlatCap)](https://github.com/flatcap)
-rich@flatcap.org
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
 

@@ -33,7 +33,7 @@ Feature              | Description
 
 ## Bug Fixes
 
-NeoMutt also includes a branch containing bug fixes.
+NeoMutt also includes a branch containing [[bug fixes|bugfixes]].
 Most originated in other features, but are actually independent of the feature.
 These fixes should be pushed to the Upstream Mutt development.
 
