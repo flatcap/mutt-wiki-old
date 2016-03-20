@@ -9,7 +9,8 @@ Hopefully this will build the community and reduce duplicated effort.
 
 ### Latest news
 
-- **2016-03-20** - [**Bug-fixes Page** - Added a list of bug-fix commits](News#2016-03-20)
+- **2016-03-20** - [**NeoMutt Release** - Bugfix Release](News#2016-03-20)
+- **2016-03-19** - [**Bug-fixes Page** - Added a list of bug-fix commits](News#2016-03-19)
 - **2016-03-17** - [**NeoMutt Release** - NotMuch, IfDef](News#2016-03-17)
 - **2016-03-07** - [**NeoMutt Release** - First NeoMutt release](News#2016-03-07)
 

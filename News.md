@@ -1,4 +1,20 @@
-## <a name="2016-03-20"></a>2016-03-20 - Bug-fixes Page
+## <a name="2016-03-20"></a>2016-03-20 - NeoMutt Release: Bugfix Release
+
+These patches apply to **Mutt-1.5.24.**
+
+New to NeoMutt this release:
+- Numerous [small bugfixes](https://github.com/neomutt/neomutt/wiki/bug-fixes)
+- TravisCI integration
+
+**[Download NeoMutt Patches](https://github.com/neomutt/neomutt/releases/download/neomutt-20160320/neomutt-patches-20160320.tar.gz)**
+
+"neomutt-20160320.patch" is all the patches rolled into one.
+
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
+
+---
+
+## <a name="2016-03-19"></a>2016-03-19 - Bug-fixes Page
 
 Added a [[bug-fixes page|bug-fixes]] to list the changes to Mutt.
 
