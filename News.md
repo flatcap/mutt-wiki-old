@@ -1,3 +1,12 @@
+## <a name="2016-03-25"></a>2016-03-25 - Sidebar Intro
+
+Added a [Sidebar Intro](sidebar-intro) - A Gentle Introduction to the Sidebar
+(with pictures).
+
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
+
+---
+
 ## <a name="2016-03-20"></a>2016-03-20 - NeoMutt Release: Bugfix Release
 
 These patches apply to **Mutt-1.5.24.**
