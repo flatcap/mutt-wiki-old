@@ -14,7 +14,7 @@
     * [[Notmuch|notmuch]]
     * [[Progress Bar|progress]]
     * [[Quasi-Delete|quasi-delete]]
-    * [[Sidebar|sidebar]]
+    * [[Sidebar|sidebar]] [[(intro)|sidebar-intro]]
     * [[Status Color|status-color]]
     * [[TLS-SNI|tls-sni]]
     * [[Trash Folder|trash]]
