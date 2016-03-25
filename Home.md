@@ -38,7 +38,8 @@ The main aim of NeoMutt Developemnt is to find, tidy and release existing
 patches for Mutt.  If there's a patch you would like to see in Mutt, you can add
 an [Issue](https://github.com/neomutt/neomutt/issues) to let me know.
 
-[![Build Status](https://travis-ci.org/neomutt/neomutt.svg?branch=neomutt)](https://travis-ci.org/neomutt/neomutt)
+[![TravisCI](https://travis-ci.org/neomutt/neomutt.svg?branch=neomutt)](https://travis-ci.org/neomutt/neomutt)
+[![Coverity](https://scan.coverity.com/projects/8302/badge.svg)](https://scan.coverity.com/projects/flatcap-mutt)
 
 *[[Read more...|Development]]*
 

@@ -20,4 +20,6 @@ To understand the layout, this [Repository Diagram](https://flatcap.org/mutt/fla
 **Note:** This repository is under **heavy** development and anything you see
 today, may be gone _later_ today.
 
+[![TravisCI](https://travis-ci.org/neomutt/neomutt.svg?branch=neomutt)](https://travis-ci.org/neomutt/neomutt)
+[![Coverity](https://scan.coverity.com/projects/8302/badge.svg)](https://scan.coverity.com/projects/flatcap-mutt)
 
