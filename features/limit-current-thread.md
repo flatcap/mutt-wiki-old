@@ -6,6 +6,8 @@ Focus on one Email Thread
 Patch
 -----
 
+To check if Mutt supports "limit-current-thread", look for "patch-limit-current-thread" in the mutt version.
+
 **Dependencies**
 -   mutt-1.5.24
 

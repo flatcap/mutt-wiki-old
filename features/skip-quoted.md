@@ -6,6 +6,8 @@ Leave some context visible
 Patch
 -----
 
+To check if Mutt supports "Skip-Quoted", look for "patch-skip-quoted" in the mutt version.
+
 **Dependencies**
 -   mutt-1.5.24
 
