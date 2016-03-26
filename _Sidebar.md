@@ -21,6 +21,7 @@
 - **[[Development]]**
     * [[Compressed Folders|compress]]
     * [[Keywords|keywords]]
+    * [[Limit Current Thread|limit-current-thread]]
     * [[NNTP|nntp]]
     * [[Sensible Browser|sensible-browser]]
     * [[Skip Quoted|skip-quoted]]
