@@ -6,11 +6,13 @@ New to NeoMutt this release:
 - [[Skip-Quoted|skip-quoted]] Skip Quoted Text
 - [[Limit-Current-Thread|limit-current-thread]] Limit Index View to Current Thread
 
-[[Skip-Quoted|skip-quoted]] shows some context when using the `\<skip-quoted\>`
+[[Skip-Quoted|skip-quoted]] shows some context when using the `<skip-quoted>`
 function.
 
 [[Limit-Current-Thread|limit-current-thread]] allows you to limit the index view
 to just the current thread.
+
+These new features are the work of David Sterba (kdave).
 
 **[Download NeoMutt Patches](https://github.com/neomutt/neomutt/releases/download/neomutt-20160328/neomutt-patches-20160328.tar.gz)**
 
