@@ -10,7 +10,6 @@ Feature                  | Description
 **[[keywords]]**         | Labels/Tagging for emails
 **[[nntp]]**             | Talk to a Usenet news server
 **[[sensible-browser]]** | Highlight the folder you *used* to be in
-**[[skip-quoted]]**      | Show some quoted context
 
 ## Current Development
 

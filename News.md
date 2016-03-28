@@ -1,3 +1,25 @@
+## <a name="2016-03-28"></a>2016-03-28 - NeoMutt Release: NotMuch, IfDef
+
+These patches apply to **Mutt-1.5.24.**
+
+New to NeoMutt this release:
+- [[Skip-Quoted|skip-quoted]] Skip Quoted Text
+- [[Limit-Current-Thread|limit-current-thread]] Limit Index View to Current Thread
+
+[[Skip-Quoted|skip-quoted]] shows some context when using the `\<skip-quoted\>`
+function.
+
+[[Limit-Current-Thread|limit-current-thread]] allows you to limit the index view
+to just the current thread.
+
+**[Download NeoMutt Patches](https://github.com/neomutt/neomutt/releases/download/neomutt-20160328/neomutt-patches-20160328.tar.gz)**
+
+"neomutt-20160328.patch" is all the patches rolled into one.
+
+<sub>([Richard Russon](https://github.com/flatcap))</sub>
+
+---
+
 ## <a name="2016-03-25"></a>2016-03-25 - Sidebar Intro
 
 Added a [Sidebar Intro](sidebar-intro) - A Gentle Introduction to the Sidebar

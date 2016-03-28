@@ -123,55 +123,6 @@ No notes.
 
 ---
 
-### fix multi-column truncation
-
-> mutt_format_string() takes a parameter 'max_width' to limit the number
-> of screen-columns.
-
-> If it is given a string containing a 2-column character, e.g. '本' and a
-> max_width of 1, then the returned string will be empty. This breaks the
-> alignment in the index panel (and sidebar).
-
-> The correct action should be to pad the string with a single 1-column
-> space.
-
-> Example of "Enough Space":
-
-> index_format='%10s<<<'
-
-	Subject 10<<<
-	Subject 军<<<
-	Subject 20<<<
-
-> (Allowing for some font anomolies, the <<<'s are aligned
-
-> Example of "Too little space":
-
-> index_format='%9s<<<'
-
-	Subject 1<<<
-	Subject <<<
-	Subject 2<<<
-
-> Now, the <<<'s are not aligned, misaligning the rest of the index line.
-
-> Example of "Expected output":
-
-	Subject 1<<<
-	Subject  <<<
-	Subject 2<<<
-
-> Strings are truncated to the expected width.
-
-> The attached patch fixes the problem.
-
-> If we run out of space for the next character, BUT there is still some
-> space, add 1 space character.
-
-<sub>([Richard Russon](https://github.com/flatcap) - 2016-03-18 - [1d5bbc8](https://github.com/neomutt/neomutt/commit/1d5bbc8b9057bec4d78461eb467dbac632070389))</sub>
-
----
-
 ### fedora: sync_helper crash fix
 
 > Fedora adds this patch to fix a crash in sync_helper() (imap/imap.c)
